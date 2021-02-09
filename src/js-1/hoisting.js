@@ -13,7 +13,7 @@
 //     var a = 10;
 // }
 
-// // e.x.2
+// // e.x.2 4752
 // //
 // fn();
 //
@@ -27,23 +27,89 @@
 //
 // fn();
 
-// e.x.3
-// discuss: for hoisting declaration (func prior var)
-function funcPriorVar() {
-    console.log(a); // both func & var declarations hoist, but func > var, so log func
+// // e.x.3
+// // discuss: for hoisting declaration (func prior var)
+// function funcPriorVar() {
+//     console.log(a); // both func & var declarations hoist, but func > var, so log func
+//
+//     var a = 1;
+//
+//     console.log(a); // a from func to 1
+//
+//     function a() {
+//         console.log('a is a function now')
+//     }
+//
+//     var b = function() {
+//         console.log('++++');
+//     }
+//     console.log(b); // log the whole func
+// }
+//
+// funcPriorVar();
 
-    var a = 1;
+// // e.x.4 1535  GEC (global execution context), ECS (stack)
+// function f1() {
+//     console.log("f1");
+//     f2();
+// }
+// function f2() {
+//     console.log("f2");
+//     f3();
+// }function f3() {
+//     console.log("f3");
+//     f4();
+// }function f4() {
+//     console.log("f4");
+// }
+//
+// f1();
 
-    console.log(a); // a from func to 1
+// e.x. 2412
+console.log(a1); // undefined
+console.log(b1); // undefined
+console.log(f1); // func body
 
-    function a() {
-        console.log('a is a function now')
+// func/var declaration
+var a1 = 19;
+var a2 = 20;
+var a3 = "hello";
+var b1 = {name: "John Doe"};
+
+var res = f1(a1, a2); //39
+
+console.log(res);
+
+function f1(a, b) {
+    var t = 0;
+    var m = 10;
+    console.log(a); // 19
+    console.log(b); // 20
+
+    function f2() {
+        console.log("this is f2");
     }
 
-    var b = function() {
-        console.log('++++');
-    }
-    console.log(b); // log func
+    f2();
+    return a + b;
 }
 
-funcPriorVar();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
