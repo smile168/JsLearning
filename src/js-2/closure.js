@@ -67,7 +67,7 @@
 // }
 //
 // console.log(practice1());
-// var sol = practice1(); // arr of funcs
+// var sol = practice1(); // arr of function bodies
 //
 // for (var j = 0; j < 4; j++) {
 //     sol[j]();
@@ -92,7 +92,7 @@ function practice2() {
 }
 
 console.log(practice2());
-var sol = practice2(); // arr of funcs
+var sol = practice2(); // arr of function bodies
 
 for (var j = 0; j < 4; j++) {
     sol[j]();
